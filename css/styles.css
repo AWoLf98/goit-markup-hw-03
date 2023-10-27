@@ -168,10 +168,7 @@ button {
 
 /* === Sections === */
 
- .section,
- .section-virtuess,
- .section-team,
- .section-portfolio {
+ .section {
     padding: 120px 0;
 }
 
