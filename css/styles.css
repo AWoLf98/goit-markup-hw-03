@@ -147,7 +147,7 @@ button {
     display: block;
     margin: 0 auto;
     /* padding: 16px 32px; */
-    width: 169px;
+    min-width: 169px;
     height: 56px;
     font-size: 16px;
     font-weight: 500;
@@ -248,7 +248,7 @@ button {
 
 .list-team-item {
     background-color: #FFFFFF;
-    flex-basis: calc((100%-72px)/4);;
+    flex-basis: calc((100% - 72px) / 4);
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
@@ -274,7 +274,7 @@ button {
 }
 
 .portfolio-item {
-    flex-basis: calc((100%-48px)/3);
+    flex-basis: calc((100% - 48px) / 3);
 }
 
 .portfolio-list-conteiner {
