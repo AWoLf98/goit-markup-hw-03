@@ -1,19 +1,69 @@
+/* Base */
 body {
     font-family: 'Roboto', sans-serif;
     color: #434455;
     background-color:#FFFFFF;
 }
 
-.list {
-    list-style-type: none;
+/* контейнер */
+.container {
+    width: 1158px;
+    padding: 0 15px;
+    margin: 0 auto;
 }
 
+/* Стилі для обнулення верхніх відступів у елементів */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+/* Властивості для коректного відображення картинок */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Властивості для обнулення курсиву address */
+address {
+    font-style: normal;
+}
+
+/* Клас для обнулення базових властивостей списків (ul) */
+.list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+/* Клас для обнулення базових властивостей у посилань */
 .link {
     text-decoration: none;
 }
 
 button {
     cursor: pointer;
+}
+
+/*=== HEADER ===*/
+
+.page-header {
+    border-bottom: 1px solid #E7E9FC;
+}
+.page-header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-page {
+    display: flex;
+    align-items: center;
 }
 
 .main-logo {
@@ -25,21 +75,22 @@ button {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
-}
-
-.footer-logo {
-    color: #4d5ae5;
-}
-
-.span-footer-logo {
-    color: #f4f4fd;
+    margin-right: 76px;
 }
 
 .span-logo {
     color: #2e2f42;
 }
 
+.menu, 
+.list-address {
+    display: flex;
+    gap: 40px;
+}
+
 .menu-link {
+    display: inline-block;
+    padding: 24px 0;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -57,8 +108,9 @@ button {
     font-style: normal;
 }
 
-
 .address-link {
+    display: inline-block;
+    padding: 24px 0;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -72,7 +124,16 @@ button {
     color: #404BBF;
 }
 
+/* === Hero === */
+
+.hero-section {
+    padding: 188px 0;
+    background-color: #2E2F42;
+}
+
 .hero-header {
+    margin: 0 auto 48px auto;
+    max-width: 496px;
     text-align: center;
     font-size: 56px;
     font-style: normal;
@@ -83,13 +144,21 @@ button {
 }
 
 .hero-button {
+    display: block;
+    margin: 0 auto;
+    /* padding: 16px 32px; */
+    width: 169px;
+    height: 56px;
     font-size: 16px;
-    font-family: inherit;
     font-weight: 500;
     line-height: 1.5;
-    letter-spacing: 0.04em;
+    /* в цьому моменті хз що відбувається якщо задаю 0.04em все ламається при вказаному падінг*/
+    letter-spacing: 0.04em;  
     background-color: #4D5AE5;
     color: #ffffff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
 }
 
 .hero-button:hover,
@@ -97,11 +166,19 @@ button {
     background-color: #404BBF;
 }
 
-.hero-section, .page-footer {
-    background-color: #2E2F42;
+/* === Sections === */
+
+ .section,
+ .section-virtuess,
+ .section-team,
+ .section-portfolio {
+    padding: 120px 0;
 }
 
-.section-virtues-header, .section-team-header, .section-portfolio-header {
+.section-virtues-header,
+.section-team-header,
+.section-portfolio-header {
+    margin-bottom: 72px;
     text-align: center;
     font-size: 36px;
     font-weight: 700;
@@ -111,7 +188,10 @@ button {
     color: #2e2f42;
 }
 
-.header-virtues, .header-team, .header-portfolio {
+.header-virtues,
+.header-team,
+.header-portfolio {
+    margin-bottom: 8px;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -119,7 +199,9 @@ button {
     color: #2E2F42;
 }
 
-.paragraph-virtues, .paragraph-team, .paragraph-portfolio {
+.paragraph-virtues,
+.paragraph-team,
+.paragraph-portfolio {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
@@ -127,22 +209,102 @@ button {
     color: #434455;
 }
 
+/* === Section virtues === */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.list-virtues {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.list-virtues-item {
+    flex-basis: calc((100%-72px)/4);
+}
+
+/* === Section Team === */
+
 .section-team {
-background-color: #F4F4FD;
+    background-color: #F4F4FD;
 }
+
+.section-team-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
 .list-team-item {
-    background-color:#FFFFFF;
+    background-color: #FFFFFF;
+    flex-basis: calc((100%-72px)/4);;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
-.header-team {
+.list-team-conteiner {
+    padding: 32px 0;
+}
+
+.list-team-conteiner>.header-team,
+.list-team-conteiner>.paragraph-team {
     text-align: center;
 }
 
-.paragraph-team {
-    text-align: center;
+/* === Section Portfolio === */
+
+.section-portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    column-gap: 24px;
+    row-gap: 48px;
+}
+
+.portfolio-item {
+    flex-basis: calc((100%-48px)/3);
+}
+
+.portfolio-list-conteiner {
+    padding: 32px 16px;
+    border: 1px solid #E7E9FC;
+    border-top: none;
+}
+
+/* === FOOTER === */
+
+.page-footer {
+    padding: 100px 0;
+    background-color: #2E2F42;
+}
+
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: #4d5ae5;
+}
+
+.span-footer-logo {
+    color: #f4f4fd;
 }
 
 .page-footer-paragraph {
+    max-width: 264px;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
